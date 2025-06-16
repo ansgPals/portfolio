@@ -23,7 +23,9 @@ export default function Section4({
           경험과 노하우를 쌓고 있습니다.
         </h2>
       </StyledSectionTitle>
-      <p> 업무경험 </p>
+      <p>
+        <span>업무경험</span>
+      </p>
       <StyledCareerCard>
         <p>❇️ 2025.06 ~ 재직중</p>
         <div>
@@ -138,7 +140,10 @@ const StyledSection4 = styled(StyledMainSection)`
     color: ${(props) => props.theme.colors.grey200};
     column-gap: 1rem;
     margin: 1rem 0 1rem 0;
-
+    > span {
+      width: 100px;
+      text-align: center;
+    }
     &::before {
       content: "";
       width: 40%;

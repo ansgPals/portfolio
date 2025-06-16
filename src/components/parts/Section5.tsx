@@ -40,7 +40,7 @@ export default function Section5({
             </div>
             <div>
               <h3>{item.title}</h3>
-              <p>일본 신재생에너지 크라우드 펀딩 플랫폼</p>
+              <p>{item.description}</p>
               <StyledProjectStackBox>
                 {projectStackImages[item.projectName as ProjectName].map(
                   (src) => {
