@@ -16,7 +16,7 @@ export default function Section5({
 }: {
   projectRef: React.RefObject<HTMLElement | null>;
 }) {
-  const [modalState, setModalState] = useState(true);
+  const [modalState, setModalState] = useState(false);
   const [selectedProject, setSelectedProject] = useState<ProjectName | null>(
     "esjp"
   );
