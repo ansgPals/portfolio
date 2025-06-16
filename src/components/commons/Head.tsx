@@ -23,10 +23,13 @@ export default function Header() {
         content="프론트엔드 개발자 문혜민입니다."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://your-domain.com" />
+      <meta
+        property="og:url"
+        content="https://portfolio-opal-iota-92.vercel.app"
+      />
       <meta
         property="og:image"
-        content="https://your-domain.com/og-image.png"
+        content="https://portfolio-opal-iota-92.vercel.app/og-image.png"
       />
 
       <link rel="icon" href="/favicon.ico" />
