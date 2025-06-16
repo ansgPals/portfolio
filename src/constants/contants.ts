@@ -1,0 +1,230 @@
+import { ProjectName } from "@/types/types";
+
+export const stackImages = [
+  "/stack/NextJS.png",
+  "/stack/TypeScript.png",
+  "/stack/JavaScript.png",
+  "/stack/React.png",
+  "/stack/Emotion.png",
+  "/stack/StyledComponent.png",
+  "/stack/Axios.png",
+  "/stack/ApolloClient.png",
+  "/stack/react-query.png",
+  "/stack/useSWR.png",
+  "/stack/react-hook-form.png",
+  "/stack/Vercel.png",
+  "/stack/Recoil.png",
+  "/stack/Zustand.png",
+  "/stack/Jira.png",
+  "/stack/VSCode.png",
+  "/stack/Figma.png",
+  "/stack/Github.png",
+  "/stack/GitLab.png",
+  "/stack/Slack.png",
+];
+
+export const careerStackImages = {
+  heuron: [
+    "/stack/React.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/Axios.png",
+    "/stack/Cornerstone.png",
+    "/stack/Recoil.png",
+    "/stack/GitLab.png",
+  ],
+  illuminarean: [
+    "/stack/NextJS.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/react-query.png",
+    "/stack/useSWR.png",
+    "/stack/react-hook-form.png",
+    "/stack/Zustand.png",
+    "/stack/Jira.png",
+    "/stack/Github.png",
+  ],
+  dingco: [
+    "/stack/NextJS.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/StyledComponent.png",
+    "/stack/ApolloClient.png",
+    "/stack/Recoil.png",
+    "/stack/Github.png",
+  ],
+};
+export const projectStackImages: Record<ProjectName, string[]> = {
+  scs: [
+    "/stack/React.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/Axios.png",
+    "/stack/Cornerstone.png",
+    "/stack/Recoil.png",
+  ],
+  esjp: [
+    "/stack/NextJS.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/react-query.png",
+    "/stack/react-hook-form.png",
+    "/stack/Zustand.png",
+  ],
+  gvw: [
+    "/stack/NextJS.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/Axios.png",
+    "/stack/useSWR.png",
+    "/stack/Recoil.png",
+  ],
+  codeCamp: [
+    "/stack/NextJS.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/StyledComponent.png",
+    "/stack/ApolloClient.png",
+    "/stack/Recoil.png",
+  ],
+};
+
+export const projects = [
+  {
+    logo: "/logo/scs.png",
+    logoHeight: "24px",
+    projectName: "scs",
+    title: "Heuron StroCare Suite",
+    description: "뇌졸중 진단 보조 AI 서비스(SCS)",
+    memberCount: "FE 3명 BE2명 AI3명",
+    period: "2025.06 ~ ",
+    mainTask: [
+      "Cornerstone 라이브러리를 활용한 DICOM 파일 시각화 기능 구현",
+      "VTK.js 라이브러리를 활용한 NIfTI 및 DICOM 파일의 3D 볼륨 렌더링",
+    ],
+    detail: [
+      {
+        task: "첫 사용자로서 불편하거나 어색한 플로우 및 UI를 기록하고, 기획자에게 UX 개선을 제안",
+        result: [
+          "입력값 유효성 실시간 확인 및 버튼 활성화 UX 개선",
+          "로고 클릭 시 메인 화면으로 이동하도록 라우팅 처리",
+          "이미지 렌더링 전후의 UI 흔들림 현상 수정",
+          "스크롤바 유무에 따른 레이아웃 변화 문제 해결 (흔들림 제거)",
+        ],
+      },
+    ],
+  },
+  {
+    logo: "/logo/esjp.png",
+    logoHeight: "20px",
+    projectName: "esjp",
+    title: "Energy Shared Japan",
+    description: "일본 신재생에너지 크라우드 펀딩 플랫폼",
+    memberCount: "FE 3명 BE3명",
+    period: "2024.03 ~ 2025.01",
+    mainTask: [
+      "개인/법인 회원가입 및 인증 기능 구현",
+      "크라우드 펀딩 상품 리스트 및 상세 페이지 구성 (상품 노출, 필터, 상태 구분)",
+      "펀딩 상품 결제 및 구매 플로우 구현",
+      "입금/출금 처리 기능 구현",
+      "사용자 행동 기반 이메일 템플릿 생성",
+      "개인/법인 마이페이지 내 펀딩 참여 이력 조회 기능 개발",
+      "SEO 최적화",
+      "Google Tag Manager 및 GA 연동을 통한 사용자 행동 데이터 수집",
+      "관리자(Admin) 기능 구현 (상품 등록/수정, 회원 관리, 통계 대시보드 등)",
+    ],
+    detail: [
+      {
+        task: "html 로만 작성되어있던 이메일 템플릿을 전부 mjml화 ",
+        result: ["코드의 가독성과 유지 보수성 향상"],
+      },
+      {
+        task: "복잡한 컴포넌트를 합성 컴포넌트 패턴으로 리팩토링",
+        result: ["코드 구조 개선 및 유지 보수성 향상"],
+      },
+      {
+        task: "일본어 작업 효율화를 위한 Figma 번역 플러그인 개발",
+        result: ["관련 작업자들의 업무 이해도 및 속도 상승"],
+      },
+      {
+        task: "중복 API 요청 최소화를 위해 React Query 도입 및 캐싱 적용",
+        result: [
+          "15건 이상의 중복 요청 방지, 서버 부하 감소 및 응답 속도 개선",
+        ],
+      },
+      {
+        task: "사용자 편의성 향상 사항 주기 점검 및 문서화, 개선안 건의와 업무 분배 주도",
+        result: ["효율적인 기능 향상 주도"],
+      },
+    ],
+  },
+  {
+    logo: "/logo/gvw.png",
+    logoHeight: "14px",
+    projectName: "gvw",
+    title: "Good Vibe Works",
+    description: "엔터테인먼트 정산 관리 플랫폼",
+    memberCount: "FE 3명 BE2명",
+    period: "2022.09 ~ 2024.02",
+    mainTask: [
+      "Recharts 라이브러리를 활용한 비용/수익 그래프 시각화",
+      "엔터테인먼트 회사 내 아티스트 및 매니저 관리 화면 구축 (리스트, 상세, 권한별 접근 제어 포함)",
+      "아티스트/매니저/관리자의 프로필 정보(프로필사진, Role, 생일, 입사일) CRUD 기능 구현",
+      "비용 항목 CRUD 기능 구현",
+      "수익 항목 CRUD 기능 개발",
+      "수익/비용 데이터를 기반으로 한 정산 화면 구성",
+      "정산 생성 시, 아티스트 결제 여부에 따른 상태 구분 리스트 제공",
+      "아임포트를 활용한 플랫폼 구독/결제 기능 구현 (정기 결제 및 상태 반영)",
+      "관리자(Admin) 기능 구현(회사관리, 회사결제상태, 공지사항 등)",
+    ],
+    detail: [
+      {
+        task: "Zustand를 활용해 모든 커스텀 Alert 및 Toast 팝업을 전역 상태로 관리하고, app.tsx에서 일괄 제어",
+        result: ["alert, toast 관련 로직의 70%감소"],
+      },
+      {
+        task: "복잡한 폼 관리를 위해 react-hook-from과 yup도입",
+        result: ["validation로직을 최소화하여 1500줄 이상 축소"],
+      },
+      {
+        task: "React.memo, useMemo, useCallbak 적극활용해 리팩토링",
+        result: ["불필요한 리렌더링을 최소화하고, 컴포넌트 성능 최적화"],
+      },
+    ],
+  },
+  {
+    logo: "/logo/code-camp.png",
+    logoHeight: "20px",
+    projectName: "codeCamp",
+    title: "Code Camp Online",
+    description: "온라인 코딩 클래스 서비스",
+    memberCount: "FE 3명 BE2명",
+    period: "2022.05 ~ 2022.07",
+    mainTask: [
+      "회원가입 및 로그인 기능 구현",
+      "아임포트를 활용한 결제 기능 연동",
+      "마이페이지 구현 (수강중인 강의, 수강률, 추천 강의, 개인 메모 기능 포함)",
+      "메인 페이지 구성 (카테고리별 인기 강의 노출)",
+      "강의 리스트 및 강의 상세 페이지 구현",
+      "수강생 간 팔로우/언팔로우 기능 구현",
+      "수강생 커뮤니티 기능 구현 (게시글, 댓글, 좋아요 등)",
+    ],
+    detail: [
+      {
+        task: "media-query와 rem을 사용해 반응형 UI구축",
+        result: ["다양한 화면 크기에서 일관된 사용자 경험을 제공, 접근성 향상"],
+      },
+      {
+        task: "강좌 수강화면을 제외한 모든 유저화면의 주요 작업을 한달 반만에 빠르게 구현",
+        result: [
+          "대규모 화면 작업을 효율적이고 신속하게 수행하여 개발 속도와 품질 향상에 기여",
+        ],
+      },
+    ],
+  },
+];

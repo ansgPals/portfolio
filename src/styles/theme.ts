@@ -1,0 +1,37 @@
+export const theme = {
+  colors: {
+    error: "#ea2044",
+    grey700: "#353535",
+    grey500: "#666",
+    grey400: "#999",
+    grey200: "#777",
+    grey100: "#f7f7f7",
+    line300: "#707070",
+    line100: "#e4e4e4",
+    primary500: "#14a468",
+    primary400: "#18c980",
+    primary300: "#3be8a1",
+    primary200: "#68edb7",
+    point500: "#8c8db9",
+    point400: "#768aff",
+    point100: "#f8f8ff",
+    text: "#1c1c1c",
+    white: "#fff",
+  },
+  fontSizes: {
+    size13: "1.3rem",
+    size14: "1.4rem",
+    size15: "1.5rem",
+    size16: "1.6rem",
+    size17: "1.7rem",
+    size18: "1.8rem",
+    size19: "1.9rem",
+    size20: "2rem",
+    size24: "2.4rem",
+    size28: "2.8rem",
+    size32: "3.2rem",
+    size40: "4rem",
+  },
+};
+export type CustomThemeType = typeof theme;
+export default theme;
