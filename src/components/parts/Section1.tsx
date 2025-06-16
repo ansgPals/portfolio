@@ -4,12 +4,19 @@ import {
   StyledNormalButton,
 } from "@/styles/commons";
 import styled from "@emotion/styled";
+import dynamic from "next/dynamic";
+const WavingCharacter = dynamic(() => import("@/components/parts/Waving"), {
+  ssr: false,
+});
 
 export default function Section1() {
   return (
     <StyledSection1>
+      <MascotWrapper>
+        <WavingCharacter />
+      </MascotWrapper>
       <h1>
-        안녕하세요,
+        안녕하세요!
         <br />
         프론트엔드 개발자
         <br />
@@ -49,5 +56,15 @@ const StyledSection1 = styled(StyledMainSection)`
   }
   ${StyledNormalButton} {
     font-size: ${(props) => props.theme.fontSizes.size15};
+  }
+`;
+const MascotWrapper = styled.div`
+  width: 100%;
+  max-width: 800px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+  canvas {
+    display: block;
   }
 `;
