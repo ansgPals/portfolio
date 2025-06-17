@@ -66,5 +66,6 @@ const MascotWrapper = styled.div`
   overflow: hidden;
   canvas {
     display: block;
+    cursor: pointer;
   }
 `;

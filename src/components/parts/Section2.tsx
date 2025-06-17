@@ -51,8 +51,16 @@ export default function Section2({
           </li>
           <li>
             <CheckIcon />
-            기획자·디자이너와의 논의 중 불명확한 사양은 정리해 문서화하고, 팀원
-            간 원활한 개발 진행을 위한 조율자 역할도 맡습니다.
+            기획자·디자이너와의 협업 과정에서는 불명확한 사양을 정리해
+            문서화하고,
+            <br /> 팀원 간 조율자 역할을하며 원활한 개발을 이끌어 왔습니다.
+          </li>
+          <li>
+            <CheckIcon />
+            소통을 바탕으로 팀 내 분위기를 환기시키는 데 강점을 가지고 있어,
+            <br />
+            업무 흐름이 정체되거나 분위기가 침체된 프로젝트에 리더의 요청을 받아
+            투입된 경험도 있습니다.
           </li>
           <li>
             <CheckIcon />
@@ -66,23 +74,26 @@ export default function Section2({
         <h3>팀원들의 업무효율 UP을 위한 고민과 실행</h3>
         <ul>
           <li>
-            🤔 매번 배포 시 에러 발생으로 인한 시간 낭비
+            🤔 매번 배포마다 발생하는 빌드에러 발생으로 인한 배포지연
             <br />
             👉 PR 생성 시 GitHub Action을 통한 pre-build → build 에러 발생 시
-            Slack 알림 연동으로 배포 시간을 대폭 단축.
+            Slack 알림 연동으로 배포에러 발생률 감소.
           </li>
           <li>
-            🤔 일본어 기반 피그마 텍스트로 인한 빠른 UI 파악 어려움
+            🤔 피그마의 일본어 텍스트들로 인해 업무 및 UI파악이 어려움
             <br />
-            👉 피그마 텍스트 자동 번역 플러그인 개발로 디자이너-개발자 간
-            커뮤니케이션 속도 향상에 기여.
+            👉 피그마 텍스트 자동 번역 플러그인 개발로 팀원들의 업무 및 UI파악
+            속도 향상
           </li>
-
           <li>
             🤔 PR 작성 시 반복되는 담당자/리뷰어/라벨 지정
             <br />
-            👉 GitHub Action 자동화로 PR 작성 시 지정 자동화 및 템플릿 기본값
-            설정 → 리뷰 프로세스를 효율적으로 표준화.
+            👉 GitHub Action 으로 PR 작성 시 지정 자동화 및 템플릿 기본값 설정 →
+            리뷰 프로세스를 효율적으로 표준화.
+          </li>
+          <li>
+            ✅ 언제나 불편한점을 불편하다고 인식하고 개선해나가기 위해
+            노력합니다.
           </li>
         </ul>
       </StyledCoreCard>
@@ -117,6 +128,8 @@ const StyledCoreCard = styled.div`
   ul {
     font-size: ${(props) => props.theme.fontSizes.size16};
     line-height: 2.7rem;
+    ${columnBoxStyles};
+    row-gap: 1.2rem;
   }
 
   &:not(:last-of-type) {
@@ -132,8 +145,6 @@ const StyledCoreCard = styled.div`
 
   &:last-of-type {
     ul {
-      ${columnBoxStyles};
-      row-gap: 1.5rem;
     }
   }
 `;
