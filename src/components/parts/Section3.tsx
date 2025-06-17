@@ -8,11 +8,13 @@ import { getFileName } from "@/utils";
 import styled from "@emotion/styled";
 export default function Section3({
   stackRef,
+  isVisible,
 }: {
   stackRef: React.RefObject<HTMLElement | null>;
+  isVisible: boolean;
 }) {
   return (
-    <StyledSection3 ref={stackRef}>
+    <StyledSection3 ref={stackRef} isVisible={isVisible}>
       <StyledSectionTitle>
         <p>기술 스택 및 도구</p>
         <h2>아래의 기술을 사용할 수 있습니다.</h2>

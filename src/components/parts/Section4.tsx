@@ -10,11 +10,13 @@ import styled from "@emotion/styled";
 
 export default function Section4({
   careerRef,
+  isVisible,
 }: {
   careerRef: React.RefObject<HTMLElement | null>;
+  isVisible: boolean;
 }) {
   return (
-    <StyledSection4 ref={careerRef}>
+    <StyledSection4 ref={careerRef} isVisible={isVisible}>
       <StyledSectionTitle>
         <p>경력 사항</p>
         <h2>

@@ -5,6 +5,7 @@ import Section3 from "@/components/parts/Section3";
 import Section4 from "@/components/parts/Section4";
 import Section5 from "@/components/parts/Section5";
 import Section6 from "@/components/parts/Section6";
+import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
 import { centerColumnBoxStyles } from "@/styles/modules";
 import styled from "@emotion/styled";
 import { useRef } from "react";
@@ -14,6 +15,12 @@ export default function Main() {
   const projectRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
   const coreRef = useRef<HTMLElement>(null);
+  const isVisibleCore = useScrollFadeIn(coreRef);
+  const isVisibleStack = useScrollFadeIn(stackRef);
+  const isVisibleCareer = useScrollFadeIn(careerRef);
+  const isVisibleProject = useScrollFadeIn(projectRef);
+  const isVisibleContact = useScrollFadeIn(contactRef);
+
   return (
     <StyledMainWrapper>
       <Section1 />
@@ -26,11 +33,11 @@ export default function Main() {
           contact: contactRef,
         }}
       />
-      <Section2 coreRef={coreRef} />
-      <Section3 stackRef={stackRef} />
-      <Section4 careerRef={careerRef} />
-      <Section5 projectRef={projectRef} />
-      <Section6 contactRef={contactRef} />
+      <Section2 coreRef={coreRef} isVisible={isVisibleCore} />
+      <Section3 stackRef={stackRef} isVisible={isVisibleStack} />
+      <Section4 careerRef={careerRef} isVisible={isVisibleCareer} />
+      <Section5 projectRef={projectRef} isVisible={isVisibleProject} />
+      <Section6 contactRef={contactRef} isVisible={isVisibleContact} />
       <StyledGradient />
     </StyledMainWrapper>
   );

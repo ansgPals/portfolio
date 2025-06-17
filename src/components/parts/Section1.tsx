@@ -11,7 +11,7 @@ const WavingCharacter = dynamic(() => import("@/components/parts/Waving"), {
 
 export default function Section1() {
   return (
-    <StyledSection1>
+    <StyledSection1 isVisible={true} isFirstSection={true}>
       <MascotWrapper>
         <WavingCharacter />
       </MascotWrapper>

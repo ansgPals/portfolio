@@ -13,15 +13,17 @@ import ProjectModal from "./ProjectModal";
 
 export default function Section5({
   projectRef,
+  isVisible,
 }: {
   projectRef: React.RefObject<HTMLElement | null>;
+  isVisible: boolean;
 }) {
   const [modalState, setModalState] = useState(false);
   const [selectedProject, setSelectedProject] = useState<ProjectName | null>(
     "esjp"
   );
   return (
-    <StyledSection5 ref={projectRef}>
+    <StyledSection5 ref={projectRef} isVisible={isVisible}>
       <StyledSectionTitle>
         <p>프로젝트 상세</p>
         <h2>주요 프로젝트의 세부 사항을 확인해보세요</h2>

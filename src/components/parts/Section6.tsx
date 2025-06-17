@@ -4,11 +4,13 @@ import styled from "@emotion/styled";
 
 export default function Section6({
   contactRef,
+  isVisible,
 }: {
   contactRef: React.RefObject<HTMLElement | null>;
+  isVisible: boolean;
 }) {
   return (
-    <StyledSection6 ref={contactRef}>
+    <StyledSection6 ref={contactRef} isVisible={isVisible}>
       <StyledSectionTitle>
         <p>Contact</p>
         <h2>궁금한 점이나 문의는 언제든 편하게 연락 주세요.</h2>

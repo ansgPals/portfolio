@@ -8,11 +8,13 @@ import {
 import styled from "@emotion/styled";
 export default function Section2({
   coreRef,
+  isVisible,
 }: {
   coreRef: React.RefObject<HTMLElement | null>;
+  isVisible: boolean;
 }) {
   return (
-    <StyledSection2 ref={coreRef}>
+    <StyledSection2 ref={coreRef} isVisible={isVisible}>
       <StyledSectionTitle>
         <p>핵심 역량</p>
         <h2>

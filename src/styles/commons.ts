@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { fadeInUpAnimation } from "./animations";
 import { centerColumnBoxStyles } from "./modules";
 
 export const StyledButtonWrapper = styled.div`
@@ -52,10 +53,15 @@ export const StyledLabel = styled.label`
   margin: 0 0.8rem 0 0;
 `;
 
-export const StyledMainSection = styled.section`
+export const StyledMainSection = styled.section<{
+  isVisible: boolean;
+  isFirstSection?: boolean;
+}>`
   width: 100%;
   max-width: calc(100vw - 5rem);
   padding: 3rem 0;
+  opacity: ${(props) => (!props.isFirstSection ? 0 : 1)};
+  ${(props) => props.isVisible && !props.isFirstSection && fadeInUpAnimation}
 `;
 
 export const StyledSectionTitle = styled.div`
