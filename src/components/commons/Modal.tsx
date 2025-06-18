@@ -56,6 +56,7 @@ const StyledModalWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   border-radius: 0.5rem;
   padding: 0 0 1.5rem 0;
+  position: relative;
   > header {
     display: flex;
     justify-content: end;
@@ -75,5 +76,20 @@ const StyledModalWrapper = styled.div`
     overflow-y: auto;
     padding: 0 1.2rem 0 1.5rem;
     margin: 1rem 0 0 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background: linear-gradient(
+      to top,
+      ${(props) => props.theme.colors.white} 0%,
+      rgba(255, 255, 255, 0.9) 30%,
+      rgba(255, 255, 255, 0.6) 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 `;
