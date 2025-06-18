@@ -28,7 +28,7 @@ export default function Section1() {
       </p>
 
       <StyledButtonWrapper>
-        <a href="/FE-문혜민.pdf" download>
+        <a href="/resume.pdf" download>
           <StyledNormalButton>이력서 다운로드</StyledNormalButton>
         </a>
       </StyledButtonWrapper>
