@@ -23,44 +23,45 @@ export default function Section5({
     "esjp"
   );
   return (
-    <StyledSection5 ref={projectRef} isVisible={isVisible}>
-      <StyledSectionTitle>
-        <p>프로젝트 상세</p>
-        <h2>주요 프로젝트의 세부 사항을 확인해보세요</h2>
-      </StyledSectionTitle>
-      <ul>
-        {projects.map((item) => (
-          <StyledProjectLi
-            onClick={() => {
-              setModalState(true);
-              setSelectedProject(item.projectName as unknown as ProjectName);
-            }}
-            key={item.projectName}
-          >
-            <div>
-              <img src={item.logo} height={item.logoHeight} />
-            </div>
-            <div>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <StyledProjectStackBox>
-                {projectStackImages[item.projectName as ProjectName].map(
-                  (src) => {
-                    const stackName = getFileName(src);
-                    return (
-                      <TooltipWrapper key={src}>
-                        <img src={src} alt={stackName} />
-                        <span className="tooltip">{stackName}</span>
-                      </TooltipWrapper>
-                    );
-                  }
-                )}
-              </StyledProjectStackBox>
-            </div>
-          </StyledProjectLi>
-        ))}
-      </ul>
-
+    <>
+      <StyledSection5 ref={projectRef} isVisible={isVisible}>
+        <StyledSectionTitle>
+          <p>프로젝트 상세</p>
+          <h2>주요 프로젝트의 세부 사항을 확인해보세요</h2>
+        </StyledSectionTitle>
+        <ul>
+          {projects.map((item) => (
+            <StyledProjectLi
+              onClick={() => {
+                setModalState(true);
+                setSelectedProject(item.projectName as unknown as ProjectName);
+              }}
+              key={item.projectName}
+            >
+              <div>
+                <img src={item.logo} height={item.logoHeight} />
+              </div>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <StyledProjectStackBox>
+                  {projectStackImages[item.projectName as ProjectName].map(
+                    (src) => {
+                      const stackName = getFileName(src);
+                      return (
+                        <TooltipWrapper key={src}>
+                          <img src={src} alt={stackName} />
+                          <span className="tooltip">{stackName}</span>
+                        </TooltipWrapper>
+                      );
+                    }
+                  )}
+                </StyledProjectStackBox>
+              </div>
+            </StyledProjectLi>
+          ))}
+        </ul>
+      </StyledSection5>{" "}
       {modalState && selectedProject && (
         <ProjectModal
           project={selectedProject}
@@ -68,7 +69,7 @@ export default function Section5({
           handleClose={() => setModalState(false)}
         />
       )}
-    </StyledSection5>
+    </>
   );
 }
 
