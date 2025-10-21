@@ -29,7 +29,27 @@ export default function Section4({
         <span>업무경험</span>
       </p>
       <StyledCareerCard>
-        <p>❇️ 2025.06 ~ 재직중</p>
+        <p>❇️ 2025.09 ~ 재직중</p>
+        <div>
+          <h3>인터엑스</h3>
+          <p>
+            AI 및 빅데이터 분석 기반 제조 공정 최적화, 자율공장 운영 서비스를
+            제공하는 기업
+            <br />
+            데이터전처리(Mlops), 데이터수집기(DA) MVP1 화면기획/개발(프론트엔드)
+          </p>
+          <StyledStackBox>
+            {careerStackImages.interx.map((src) => (
+              <TooltipWrapper key={src}>
+                <img src={src} alt={getFileName(src)} />
+                <span className="tooltip">{getFileName(src)}</span>
+              </TooltipWrapper>
+            ))}
+          </StyledStackBox>
+        </div>
+      </StyledCareerCard>
+      <StyledCareerCard>
+        <p>❇️ 2025.06 ~ 09</p>
         <div>
           <h3>휴런</h3>
           <p>

@@ -7,6 +7,7 @@ export const stackImages = [
   "/stack/React.png",
   "/stack/Emotion.png",
   "/stack/StyledComponent.png",
+  "/stack/storybook.png",
   "/stack/Axios.png",
   "/stack/ApolloClient.png",
   "/stack/react-query.png",
@@ -15,6 +16,8 @@ export const stackImages = [
   "/stack/Vercel.png",
   "/stack/Recoil.png",
   "/stack/Zustand.png",
+  "/stack/docusaurus.png",
+
   "/stack/Jira.png",
   "/stack/VSCode.png",
   "/stack/Figma.png",
@@ -24,6 +27,17 @@ export const stackImages = [
 ];
 
 export const careerStackImages = {
+  interx: [
+    "/stack/React.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/react-query.png",
+    "/stack/Zustand.png",
+    "/stack/storybook.png",
+    "/stack/docusaurus.png",
+    "/stack/GitLab.png",
+  ],
   heuron: [
     "/stack/React.png",
     "/stack/TypeScript.png",
@@ -57,6 +71,25 @@ export const careerStackImages = {
   ],
 };
 export const projectStackImages: Record<ProjectName, string[]> = {
+  fl: [
+    "/stack/React.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/Zustand.png",
+    "/stack/storybook.png",
+    "/stack/docusaurus.png",
+    "/stack/GitLab.png",
+  ],
+  mlops: [
+    "/stack/React.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/react-query.png",
+    "/stack/Zustand.png",
+    "/stack/GitLab.png",
+  ],
   scs: [
     "/stack/React.png",
     "/stack/TypeScript.png",
@@ -96,25 +129,116 @@ export const projectStackImages: Record<ProjectName, string[]> = {
 
 export const projects = [
   {
+    logo: "/logo/fl.png",
+    logoHeight: "24px",
+    projectName: "fl",
+    title: "InterX Frontend Library",
+    description: "사내용 프론트엔드 라이브러리",
+    memberCount: "FE 1명",
+    period: "2025.09 ~",
+    mainTask: [
+      "SI project, 자체 solution 프로젝트에 사용할 사내용 프론트엔드 라이브러리생성",
+      "입사예정 프론트엔드 팀원들과의 효율적인 작업을 위한 코드컨벤션 확립",
+      "프론트엔드 작업을 위한 boiler-plate 셋팅/생성",
+    ],
+    detail: [
+      {
+        task: "Components, Hooks 생성",
+        result: [
+          "작업되어있던 디자인 컴포넌트 기반으로 모든 Components 신규생성",
+          "모든 프로젝트에서 공통으로 적용되는 theme 설정, font설정등을 담고있는 Provider제공",
+          "모든 프로젝트에서 필수로 사용될만한 Hooks생성(useInputs, useValidation 등)",
+        ],
+      },
+      {
+        task: "프론트엔드 개발자를 위한 Docs, 디자이너와의 협업을 위한 storybook 제공",
+        result: [
+          "docusaurus를 도입, mdx 파일 작성만으로도 깔끔한 UI의 Docs 구현",
+          "storybook에서도 components의 light/dark 모드를 확인할수있도록 구현",
+          "Storybook 내 글로벌 스타일 및 Provider 설정 반영으로 실제 환경과 동일한 미리보기 제공",
+          "Docs와 Storybook 모두 CI/CD로 자동 빌드 및 배포 가능하도록 구성",
+        ],
+      },
+      {
+        task: "Monorepo기반 작업",
+        result: [
+          "Components, hooks, Docs, storybook를 하나의 레포에서 관리",
+          "CI/CD 용이, 버저닝 용이 하도록 작업",
+          "패키지 간 의존성 관리 및 캐시 최적화를 통한 빌드 속도 개선",
+          "패키지별 버전 관리 및 릴리즈 자동화를 위한 changeset 도입 고려",
+        ],
+      },
+    ],
+  },
+  {
+    logo: "/logo/mlops.png",
+    logoHeight: "24px",
+    projectName: "mlops",
+    title: "InterX Mlops",
+    description: "정부과제용 데이터 전처리 프로젝트 MVP1",
+    memberCount: "FE 1명, BE 1명",
+    period: "2025.09 ~",
+    mainTask: ["정부과제용 데이터 전처리 프로젝트 MVP1 개발/화면기획"],
+    detail: [
+      {
+        task: "화면기획 및 분산되어있는 개발문서 정리",
+        result: [
+          "Figjam을 활용한 화면구성안 wire-frame 작성해 타 파트와의 커뮤니케이션툴로 사용",
+          "분산되어있던 관련문서 ClickUp에 정리",
+        ],
+      },
+      {
+        task: "온프레미스 환경 고려한 개발 셋팅",
+        result: [
+          "내부 네트워크 환경에서 원활한 설치를 위해 Yarn v4 + PnP mode 도입",
+        ],
+      },
+      {
+        task: "워크플로우 생성 에디터 개발",
+        result: [
+          "Node-tree 기반의 시각적 에디터를 통해 파이프라인(DAGs) 작성 가능하도록 구현",
+          "좌측 패널에서 Operator 선택 후 Canvas Drop으로 Node 생성하는 UI 구성 (react-flow 기반)",
+          "워크플로우 저장/불러오기 기능 제공",
+          "노드 간 데이터 흐름을 시각적으로 표현해 워크플로우 이해도 향상",
+        ],
+      },
+      {
+        task: "사용자 맞춤용 대시보드 제공",
+        result: [
+          "유저가 요청할 데이터셋, 차트유형, 파라미터를 직접 선택해 위젯 생성 가능 (ECharts 사용)",
+          "react-grid-layout을 활용해 위젯의 크기 및 위치를 드래그앤드롭으로 조정 가능하도록 구현",
+          "Postman Mock-server를 활용해 예상 API 스펙에 맞춰 차트 데이터 연동 로직 구현 및 테스트",
+        ],
+      },
+    ],
+  },
+  {
     logo: "/logo/scs.png",
     logoHeight: "24px",
     projectName: "scs",
     title: "Heuron StroCare Suite",
     description: "뇌졸중 진단 보조 AI 서비스(SCS)",
     memberCount: "FE 3명 BE2명 AI3명",
-    period: "2025.06 ~ ",
+    period: "2025.06 ~ 09",
     mainTask: [
       "Cornerstone 라이브러리를 활용한 DICOM 파일 시각화 기능 구현",
       "VTK.js 라이브러리를 활용한 NIfTI 및 DICOM 파일의 3D 볼륨 렌더링",
     ],
     detail: [
       {
-        task: "첫 사용자로서 불편하거나 어색한 플로우 및 UI를 기록하고, 기획자에게 UX 개선을 제안",
+        task: "기능구현 중심의 DICOM render를 유지/보수성이 용이하도록 컴포넌트화",
+        result: [
+          "Viewer 기능별(Zoom, Pan, WindowLevel 등) 커스텀 훅 분리",
+          "공통 유틸 함수(데이터 변환, 파일 파서 등) 분리",
+          "파일 업로드/뷰어 초기화 로직 컴포넌트화",
+          "레이아웃/툴바/뷰어 영역 컴포넌트 단위로 분리",
+        ],
+      },
+      {
+        task: "어색한 플로우 및 UI/UX를 기록하고, 기획자에게 개선을 제안",
         result: [
           "입력값 유효성 실시간 확인 및 버튼 활성화 UX 개선",
-          "로고 클릭 시 메인 화면으로 이동하도록 라우팅 처리",
-          "이미지 렌더링 전후의 UI 흔들림 현상 수정",
-          "스크롤바 유무에 따른 레이아웃 변화 문제 해결 (흔들림 제거)",
+          "페이지전반 렌더링 전후의 UI 흔들림 현상 수정",
         ],
       },
     ],

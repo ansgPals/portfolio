@@ -91,8 +91,10 @@ const StyledResult = styled.div`
 
       &:first-of-type {
         font-weight: 600;
+        margin-bottom: 0.3rem;
       }
       > p {
+        margin-top: 0.4rem;
         color: ${(props) => props.theme.colors.line300};
       }
       > svg {
