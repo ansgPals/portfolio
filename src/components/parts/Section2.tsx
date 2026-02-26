@@ -71,34 +71,6 @@ export default function Section2({
           </li>
         </ul>
       </StyledCoreCard>
-
-      <StyledCoreCard>
-        <h3>팀원들의 업무효율 UP을 위한 고민과 실행</h3>
-        <ul>
-          <li>
-            🤔 매번 배포마다 발생하는 빌드에러 발생으로 인한 배포지연
-            <br />
-            👉 PR 생성 시 GitHub Action을 통한 pre-build → build 에러 발생 시
-            Slack 알림 연동으로 배포에러 발생률 감소.
-          </li>
-          <li>
-            🤔 피그마의 일본어 텍스트들로 인해 업무 및 UI파악이 어려움
-            <br />
-            👉 피그마 텍스트 자동 번역 플러그인 개발로 팀원들의 업무 및 UI파악
-            속도 향상
-          </li>
-          <li>
-            🤔 PR 작성 시 반복되는 담당자/리뷰어/라벨 지정
-            <br />
-            👉 GitHub Action 으로 PR 작성 시 지정 자동화 및 템플릿 기본값 설정 →
-            리뷰 프로세스를 효율적으로 표준화.
-          </li>
-          <li>
-            ✅ 언제나 불편한점을 불편하다고 인식하고 개선해나가기 위해
-            노력합니다.
-          </li>
-        </ul>
-      </StyledCoreCard>
     </StyledSection2>
   );
 }

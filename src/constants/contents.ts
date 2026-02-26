@@ -6,6 +6,7 @@ export const stackImages = [
   "/stack/JavaScript.png",
   "/stack/React.png",
   "/stack/Emotion.png",
+  "/stack/SCSS.png",
   "/stack/StyledComponent.png",
   "/stack/storybook.png",
   "/stack/Axios.png",
@@ -17,7 +18,6 @@ export const stackImages = [
   "/stack/Recoil.png",
   "/stack/Zustand.png",
   "/stack/docusaurus.png",
-
   "/stack/Jira.png",
   "/stack/VSCode.png",
   "/stack/Figma.png",
@@ -37,6 +37,7 @@ export const careerStackImages = {
     "/stack/storybook.png",
     "/stack/docusaurus.png",
     "/stack/GitLab.png",
+    "/stack/SCSS.png",
   ],
   heuron: [
     "/stack/React.png",
@@ -71,23 +72,33 @@ export const careerStackImages = {
   ],
 };
 export const projectStackImages: Record<ProjectName, string[]> = {
-  fl: [
-    "/stack/React.png",
-    "/stack/TypeScript.png",
-    "/stack/JavaScript.png",
-    "/stack/Emotion.png",
-    "/stack/Zustand.png",
-    "/stack/storybook.png",
-    "/stack/docusaurus.png",
-    "/stack/GitLab.png",
-  ],
-  mlops: [
+  ixmlops: [
     "/stack/React.png",
     "/stack/TypeScript.png",
     "/stack/JavaScript.png",
     "/stack/Emotion.png",
     "/stack/react-query.png",
     "/stack/Zustand.png",
+    "/stack/GitLab.png",
+  ],
+  ixda: [
+    "/stack/React.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/react-query.png",
+    "/stack/Zustand.png",
+    "/stack/GitLab.png",
+  ],
+  fl: [
+    "/stack/React.png",
+    "/stack/TypeScript.png",
+    "/stack/JavaScript.png",
+    "/stack/Emotion.png",
+    "/stack/SCSS.png",
+    "/stack/Zustand.png",
+    "/stack/storybook.png",
+    "/stack/docusaurus.png",
     "/stack/GitLab.png",
   ],
   scs: [
@@ -128,6 +139,85 @@ export const projectStackImages: Record<ProjectName, string[]> = {
 };
 
 export const projects = [
+  {
+    logo: "/logo/da.png",
+    logoHeight: "24px",
+    projectName: "ixda",
+    title: "InterX Data Analytics",
+    description: "데이터 수집 플랫폼 (데이터 수집 및 실시간 모니터링 플랫폼)",
+    memberCount: "FE 2명, BE 1명",
+    period: "2025.09 ~",
+    mainTask: ["데이터 수집 프로젝트 FE개발/화면기획"],
+    detail: [
+      {
+        task: "SSE 기반 실시간 데이터 통신 및 모니터링 UI 구현",
+        result: [
+          "데이터 수집 이후 지연 없이 화면에 반영되도록 구성하여 실시간 상태 변화 및 이상 상황을 즉시 인지할 수 있는 환경을 구축",
+        ],
+      },
+      {
+        task: "시간 차트(Line / Bar / Pie / Stacked Bar) 및 Heatmap을 통한 상태 가시화",
+        result: [
+          "다양한 형태의 차트를 활용해 데이터 흐름과 분포를 직관적으로 표현",
+          "센서 및 기기 연결 상태 가시성을 높여 모니터링 피로도 및 대응 시간 감소",
+        ],
+      },
+      {
+        task: "react-hook-form + yup 활용한 폼 성능 최적화",
+        result: [
+          "입력값 유효성 실시간 확인 및 버튼 활성화 UX 개선",
+          "페이지전반 렌더링 전후의 UI 흔들림 현상 수정",
+        ],
+      },
+      {
+        task: "사용자 맞춤용 대시보드 제공",
+        result: [
+          "유저가 요청할 데이터셋, 차트유형, 파라미터를 직접 선택해 위젯 생성 가능 (ECharts 사용)",
+          "react-grid-layout을 활용해 위젯의 크기 및 위치를 드래그앤드롭으로 조정 가능하도록 구현",
+        ],
+      },
+    ],
+  },
+  {
+    logo: "/logo/mlops.png",
+    logoHeight: "24px",
+    projectName: "ixmlops",
+    title: "InterX Mlops",
+    description: "데이터 전처리 프로젝트",
+    memberCount: "FE 2명, BE 1명",
+    period: "2025.09 ~",
+    mainTask: ["정부과제용 데이터 전처리 프로젝트 개발/화면기획"],
+    detail: [
+      {
+        task: "화면기획 및 분산되어있는 개발문서 정리",
+        result: [
+          "Figjam을 활용한 화면구성안 wire-frame 작성해 타 파트와의 커뮤니케이션툴로 사용",
+        ],
+      },
+      {
+        task: "온프레미스 환경 고려한 개발 셋팅",
+        result: [
+          "내부 네트워크 환경에서 원활한 설치를 위해 Yarn v4 + PnP mode 도입",
+        ],
+      },
+      {
+        task: "워크플로우 생성 에디터 개발",
+        result: [
+          "Node-tree 기반의 시각적 에디터를 통해 파이프라인(DAGs) 작성 가능하도록 구현",
+          "좌측 패널에서 Operator 선택 후 Canvas Drop으로 Node 생성하는 UI 구성 (react-flow 기반)",
+          "워크플로우 저장/불러오기 기능 제공",
+          "노드 간 데이터 흐름을 시각적으로 표현해 워크플로우 이해도 향상",
+        ],
+      },
+      {
+        task: "사용자 맞춤용 대시보드 제공",
+        result: [
+          "유저가 요청할 데이터셋, 차트유형, 파라미터를 직접 선택해 위젯 생성 가능 (ECharts 사용)",
+          "react-grid-layout을 활용해 위젯의 크기 및 위치를 드래그앤드롭으로 조정 가능하도록 구현",
+        ],
+      },
+    ],
+  },
   {
     logo: "/logo/fl.png",
     logoHeight: "24px",
@@ -170,79 +260,38 @@ export const projects = [
       },
     ],
   },
-  {
-    logo: "/logo/mlops.png",
-    logoHeight: "24px",
-    projectName: "mlops",
-    title: "InterX Mlops",
-    description: "정부과제용 데이터 전처리 프로젝트 MVP1",
-    memberCount: "FE 1명, BE 1명",
-    period: "2025.09 ~",
-    mainTask: ["정부과제용 데이터 전처리 프로젝트 MVP1 개발/화면기획"],
-    detail: [
-      {
-        task: "화면기획 및 분산되어있는 개발문서 정리",
-        result: [
-          "Figjam을 활용한 화면구성안 wire-frame 작성해 타 파트와의 커뮤니케이션툴로 사용",
-          "분산되어있던 관련문서 ClickUp에 정리",
-        ],
-      },
-      {
-        task: "온프레미스 환경 고려한 개발 셋팅",
-        result: [
-          "내부 네트워크 환경에서 원활한 설치를 위해 Yarn v4 + PnP mode 도입",
-        ],
-      },
-      {
-        task: "워크플로우 생성 에디터 개발",
-        result: [
-          "Node-tree 기반의 시각적 에디터를 통해 파이프라인(DAGs) 작성 가능하도록 구현",
-          "좌측 패널에서 Operator 선택 후 Canvas Drop으로 Node 생성하는 UI 구성 (react-flow 기반)",
-          "워크플로우 저장/불러오기 기능 제공",
-          "노드 간 데이터 흐름을 시각적으로 표현해 워크플로우 이해도 향상",
-        ],
-      },
-      {
-        task: "사용자 맞춤용 대시보드 제공",
-        result: [
-          "유저가 요청할 데이터셋, 차트유형, 파라미터를 직접 선택해 위젯 생성 가능 (ECharts 사용)",
-          "react-grid-layout을 활용해 위젯의 크기 및 위치를 드래그앤드롭으로 조정 가능하도록 구현",
-          "Postman Mock-server를 활용해 예상 API 스펙에 맞춰 차트 데이터 연동 로직 구현 및 테스트",
-        ],
-      },
-    ],
-  },
-  {
-    logo: "/logo/scs.png",
-    logoHeight: "24px",
-    projectName: "scs",
-    title: "Heuron StroCare Suite",
-    description: "뇌졸중 진단 보조 AI 서비스(SCS)",
-    memberCount: "FE 3명 BE2명 AI3명",
-    period: "2025.06 ~ 09",
-    mainTask: [
-      "Cornerstone 라이브러리를 활용한 DICOM 파일 시각화 기능 구현",
-      "VTK.js 라이브러리를 활용한 NIfTI 및 DICOM 파일의 3D 볼륨 렌더링",
-    ],
-    detail: [
-      {
-        task: "기능구현 중심의 DICOM render를 유지/보수성이 용이하도록 컴포넌트화",
-        result: [
-          "Viewer 기능별(Zoom, Pan, WindowLevel 등) 커스텀 훅 분리",
-          "공통 유틸 함수(데이터 변환, 파일 파서 등) 분리",
-          "파일 업로드/뷰어 초기화 로직 컴포넌트화",
-          "레이아웃/툴바/뷰어 영역 컴포넌트 단위로 분리",
-        ],
-      },
-      {
-        task: "어색한 플로우 및 UI/UX를 기록하고, 기획자에게 개선을 제안",
-        result: [
-          "입력값 유효성 실시간 확인 및 버튼 활성화 UX 개선",
-          "페이지전반 렌더링 전후의 UI 흔들림 현상 수정",
-        ],
-      },
-    ],
-  },
+
+  // {
+  //   logo: "/logo/scs.png",
+  //   logoHeight: "24px",
+  //   projectName: "scs",
+  //   title: "Heuron StroCare Suite",
+  //   description: "뇌졸중 진단 보조 AI 서비스(SCS)",
+  //   memberCount: "FE 3명 BE2명 AI3명",
+  //   period: "2025.06 ~ 09",
+  //   mainTask: [
+  //     "Cornerstone 라이브러리를 활용한 DICOM 파일 시각화 기능 구현",
+  //     "VTK.js 라이브러리를 활용한 NIfTI 및 DICOM 파일의 3D 볼륨 렌더링",
+  //   ],
+  //   detail: [
+  //     {
+  //       task: "기능구현 중심의 DICOM render를 유지/보수성이 용이하도록 컴포넌트화",
+  //       result: [
+  //         "Viewer 기능별(Zoom, Pan, WindowLevel 등) 커스텀 훅 분리",
+  //         "공통 유틸 함수(데이터 변환, 파일 파서 등) 분리",
+  //         "파일 업로드/뷰어 초기화 로직 컴포넌트화",
+  //         "레이아웃/툴바/뷰어 영역 컴포넌트 단위로 분리",
+  //       ],
+  //     },
+  //     {
+  //       task: "어색한 플로우 및 UI/UX를 기록하고, 기획자에게 개선을 제안",
+  //       result: [
+  //         "입력값 유효성 실시간 확인 및 버튼 활성화 UX 개선",
+  //         "페이지전반 렌더링 전후의 UI 흔들림 현상 수정",
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     logo: "/logo/esjp.png",
     logoHeight: "20px",

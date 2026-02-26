@@ -20,7 +20,7 @@ export default function Section5({
 }) {
   const [modalState, setModalState] = useState(false);
   const [selectedProject, setSelectedProject] = useState<ProjectName | null>(
-    "esjp"
+    "esjp",
   );
   return (
     <>
@@ -45,7 +45,7 @@ export default function Section5({
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <StyledProjectStackBox>
-                  {projectStackImages[item.projectName as ProjectName].map(
+                  {projectStackImages[item.projectName as ProjectName]?.map(
                     (src) => {
                       const stackName = getFileName(src);
                       return (
@@ -54,7 +54,7 @@ export default function Section5({
                           <span className="tooltip">{stackName}</span>
                         </TooltipWrapper>
                       );
-                    }
+                    },
                   )}
                 </StyledProjectStackBox>
               </div>

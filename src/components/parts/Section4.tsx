@@ -38,6 +38,17 @@ export default function Section4({
             <br />
             데이터전처리(Mlops), 데이터수집기(DA) MVP1 화면기획/개발(프론트엔드)
           </p>
+          <ul>
+            <li>프로젝트 외 진행사항</li>
+            <li>- 사내용 프론트엔드 라이브러리 개발</li>
+            <li>
+              - Jenkins 기반 프로젝트 전반 CI/CD 파이프라인 구성 및 알림 연동
+            </li>
+            <li>
+              - Jira 및 코드 리뷰 프로세스 도입을 통한 개발 프로세스·협업 문화
+              개선
+            </li>
+          </ul>
           <StyledStackBox>
             {careerStackImages.interx.map((src) => (
               <TooltipWrapper key={src}>
@@ -48,7 +59,7 @@ export default function Section4({
           </StyledStackBox>
         </div>
       </StyledCareerCard>
-      <StyledCareerCard>
+      {/* <StyledCareerCard>
         <p>❇️ 2025.06 ~ 09</p>
         <div>
           <h3>휴런</h3>
@@ -67,7 +78,7 @@ export default function Section4({
             ))}
           </StyledStackBox>
         </div>
-      </StyledCareerCard>
+      </StyledCareerCard> */}
       <StyledCareerCard>
         <p>❇️ 2022.09 ~ 2025.01</p>
         <div>
@@ -78,6 +89,20 @@ export default function Section4({
             크라우드 펀딩 플랫폼 및 엔터테인먼트 전문 정산 플랫폼 개발
             (프론트엔드)
           </p>
+          <ul>
+            <li>프로젝트 외 진행사항</li>
+            <li>
+              - GitHub Actions 기반 pre-build 검증 및 알림 연동으로 배포 에러 및
+              지연 감소
+            </li>
+            <li>
+              - Figma 텍스트 자동 번역 플러그인 개발로 UI 파악 및 협업 속도 개선
+            </li>
+            <li>
+              - PR 자동 설정(GitHub Actions, 템플릿)으로 코드 리뷰 프로세스
+              표준화
+            </li>
+          </ul>
           <StyledStackBox>
             {careerStackImages.illuminarean.map((src) => (
               <TooltipWrapper key={src}>
@@ -148,6 +173,20 @@ const StyledCareerCard = styled.div`
       font-size: ${(props) => props.theme.fontSizes.size15};
       line-height: 2.5rem;
       color: ${(props) => props.theme.colors.grey500};
+    }
+  }
+  ul {
+    font-size: ${(props) => props.theme.fontSizes.size15};
+    line-height: 2.5rem;
+    color: ${(props) => props.theme.colors.grey700};
+    margin: 2rem 0 0 0;
+
+    > li {
+      margin: 0.3rem 0 0 0;
+      &:first-of-type {
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+      }
     }
   }
 `;

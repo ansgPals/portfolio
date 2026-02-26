@@ -23,7 +23,7 @@ export default function Section1() {
         <strong>문혜민</strong>입니다.
       </h1>
       <p>
-        React 중심으로 웹프론트엔드를 구축합니다. <br />
+        React / Next.js 중심으로 웹프론트엔드를 구축합니다. <br />
         퍼모먼스가 뛰어나다는 평을 자주듣는 개발자 입니다.
       </p>
 
